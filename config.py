@@ -1,8 +1,7 @@
 import os
+import token
 
-
-# TOKEN_YANDEX = os.getenv('TOKEN_YANDEX')
-TOKEN_YANDEX = 'AQAAAAAPEpn8AAeocWxM-LEzTUJ7txmzPJgcMWs'
+TOKEN_YANDEX = token.TOKEN_YANDEX
 
 WORK_DIRECTORY = r'C:\\Users\\shok\\Desktop\\Yandex_Cloud_Archiver\\'
 
