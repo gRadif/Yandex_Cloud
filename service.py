@@ -1,5 +1,4 @@
 import re
-
 from my_exceptions import CloudCreateFolderError, DownloadDiskError, DownloadedFileError
 import config
 import requests
@@ -24,11 +23,9 @@ class Data:
 class YandexDisk:
     def __init__(self):
         self.files_in_available_list_dict = []
-        self.TOKEN_YANDEX = config.TOKEN_YANDEX
-        self.PATH_DESKTOP = config.WORK_DIRECTORY
         self.HEADERS = {"content-type": "application/json",
                         "charset": "utf-8",
-                        "Authorization": f"OAuth {self.TOKEN_YANDEX}"}
+                        "Authorization": f"OAuth {config.TOKEN_YANDEX}"}
 
     def create_folder_or_pass(self):
         url = 'https://cloud-api.yandex.net/v1/disk/resources/'
@@ -42,7 +39,7 @@ class YandexDisk:
             pass
 
         elif response.status_code == 201:
-            print('Create folder on cloud')
+            print('Создал папку на облаке')
 
         else:
             raise CloudCreateFolderError
@@ -102,8 +99,6 @@ class YandexDisk:
 
 class Archivator:
 
-    def __init__(self):
-        self.writed_files = []
 
     def create_archive(self, name_archive: str):
 

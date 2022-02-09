@@ -1,7 +1,6 @@
-import os
-import token
+import tok_ya
 
-TOKEN_YANDEX = token.TOKEN_YANDEX
+TOKEN_YANDEX = tok_ya.TOKEN_YANDEX
 
 WORK_DIRECTORY = r'C:\\Users\\shok\\Desktop\\Yandex_Cloud_Archiver\\'
 
