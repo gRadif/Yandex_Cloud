@@ -1,8 +1,11 @@
-import tok_ya
+try:
+    import config_local
+except ImportError:
+    print('Определите значение токена яндекс и рабочей директории ')
 
-TOKEN_YANDEX = tok_ya.TOKEN_YANDEX
+TOKEN_YANDEX = config_local.TOKEN_YANDEX
 
-WORK_DIRECTORY = r'C:\\Users\\shok\\Desktop\\Yandex_Cloud_Archiver\\'
+WORK_DIRECTORY = config_local.WORK_DIRECTORY
 
 IMAGE_FORMATS = ['jpg', 'png']
 ARCHIVE_FORMATS = ['zip', 'rar']
